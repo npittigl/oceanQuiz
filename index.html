@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ocean Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aleo&family=Balsamiq+Sans:wght@400;700&family=Itim&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7313fc4cea.js" crossorigin="anonymous"></script>
+</head>
+<body class="flexContainer">
+    <!-- whale animation -->
+    <div class="whale">
+        <div class="eyePatch"></div>
+        <div class="eye"></div>
+        <div class="mouth"></div>
+        <div class="fin"></div>
+        <div class="whiteSpot"></div>
+        <div class="oval flipper"></div>
+        <div class="oval flukeOne"></div>
+        <div class="oval flukeTwo"></div>
+    
+        <div class="puff1"></div>
+        <div class="puff2"></div>
+        <div class="puff3"></div>
+        <div class="drop"></div>
+    </div><!-- animation ends -->
+
+    <!-- header begins -->
+    <header class="wrapper">
+        <!-- main title -->
+        <h1>Ocean Quiz</h1>
+        <h2>SEA if you'll sink or swim!</h2>
+    </header>
+
+    <!-- start button -->
+    <button id="start" class="start">
+        <i class="fas fa-fish"></i>
+        Start
+        <i class="fas fa-fish"></i>
+    </button>
+
+    <!-- main begins -->
+    <main class="wrapper hide">
+        <!-- quiz container begins-->
+        <div class="quizContainer">
+            <!-- Results -->
+            <div class="result flexContainer">
+                <p>QUESTION: <span class="spanCount"> 0 </span> / 15</p>
+                <p>SCORE:  <span id="score">     0 </span> of 15 correct</p>
+            </div>
+            <!-- quiz form begins-->
+            <form class="questionForm" id="myForm">
+                <fieldset>
+                    <!-- question -->
+                    <legend class="questionElement"></legend>
+                    <!-- multiple choice options -->
+                    <div class="answerChoices"></div>
+                </fieldset> 
+                <!-- submit button -->
+                <div id="submit">
+                    <button type="submit" id="submitBtn" class="btn">Submit</button>
+                </div>
+            </form> 
+            <!-- quiz form ends -->
+
+            <!-- feedback message -->
+            <div class="quizMessage flexContainer"></div>
+            <!-- score evaluation -->
+            <div class="scoreEvaluation flexContainer"></div>
+        </div> 
+        <!-- quiz container ends --> 
+    </main><!-- main ends -->
+
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js'
+        integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
