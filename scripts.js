@@ -250,14 +250,20 @@ $(document).ready(() => {
             $submitButton.addClass('hide');
             $quizMessage.text('').append(`
             <p class="feedback">RIGHT ON! You are correct, swim to the next question.</p>
-            <div style="width:100%;height:0;padding-bottom:40%;position:relative;"><iframe src="https://giphy.com/embed/PQid6TEa9iIgM" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+            <div style="width:100%;height:0;padding-bottom:40%;position:relative;">
+                <p class="sr-only">Gif image from the Pixar movie Finding Nemo; Marlin the orange and white clown fish is riding on the back of the sea turtle named Crush.</p>
+                <iframe tabindex="-1" src="https://giphy.com/embed/PQid6TEa9iIgM" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div>
             <button id="next" class="btn next">Next</button>
             `);    
         } else {
             $submitButton.addClass('hide');
             $quizMessage.text('').append(`
             <p class="feedback"> Sink! The correct answer is <span class="correctChoice">"${correctChoice}"</span></p>
-            <div style="width:70%;height:0;padding-bottom:40%;position:relative;"><iframe src="https://giphy.com/embed/Lyk87u79SS9zi" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+            <div style="width:70%;height:0;padding-bottom:40%;position:relative;">
+                <p class="sr-only">Gif image from the Pixar movie Finding Nemo; Nemo, the little orange and white clown fish, is seen going round and round down into a drain.</p>
+                <iframe tabindex="-1" src="https://giphy.com/embed/Lyk87u79SS9zi" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div>
             <button id="next" class="btn next">Next</button>
             `);    
         }
@@ -300,19 +306,28 @@ $(document).ready(() => {
         if (score <= 8) {
             $scoreEvaluation.append(`
             <p class="evaluation">Your final score is <span class="totalScore"> ${score} </span> out of 15! You risk being shark bait. Better luck next time!</p>
-            <div style="width:70%;height:0;padding-bottom:40%;position:relative;"><iframe src="https://giphy.com/embed/107gPMgIBBleA8" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+            <div style="width:70%;height:0;padding-bottom:40%;position:relative;">
+                <p class="sr-only">Gif image from the Pixar movie Finding Nemo; Bruce the Great White Shark grins at a surprised and scared clown fish, named Marlin, and shows his many rows of very sharp teeth.</p>
+                <iframe src="https://giphy.com/embed/107gPMgIBBleA8" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div>
             <button id="reset" class="btn">Play Again</button>
             `)
         } else if (score === 9 || score === 10 || score === 11) {
             $scoreEvaluation.append(`
             <p class="evaluation">Your final score is <span class="totalScore"> ${score} </span> out of 15! Not bad - just keep swimming and you'll be on your way.</p>
-            <div style="width:70%;height:0;padding-bottom:40%;position:relative;"><iframe src="https://giphy.com/embed/14cpLJ4enIIXJK" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+            <div style="width:70%;height:0;padding-bottom:40%;position:relative;">
+                <p class="sr-only">Gif image from the Pixar movie Finding Nemo; Dory the Blue Tang fish encourages Marlin to not give up and to keep going by telling him to just keep swimming.</p>
+                <iframe src="https://giphy.com/embed/14cpLJ4enIIXJK" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div>
             <button id="reset" class="btn">Play Again</button>
             `)
         } else {
             $scoreEvaluation.append(`
             <p class="evaluation">Your final score is <span class="totalScore"> ${score} </span> out of 15! You're an ocean mas-STAR!</p>
-            <div style="width:70%;height:0;padding-bottom:40%;position:relative;"><iframe src="https://giphy.com/embed/ulSIu5DqlV51C" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+            <div style="width:70%;height:0;padding-bottom:40%;position:relative;">
+                <p class="sr-only">Gif image from the Pixar movie Finding Nemo of Peach, the pink starfish, seen smiling and happily singing and moving side to side while suctioned to the glass of the fish tank she lives inside of.</p>
+                <iframe src="https://giphy.com/embed/ulSIu5DqlV51C" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+            </div>
             <button id="reset" class="btn">Play Again</button>
             `)
         }   

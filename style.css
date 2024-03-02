@@ -7,10 +7,12 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* Stripping Styles */
-body, div, h1, h2, h3, button, p, fieldset {
+body, div, h1, h2, h3, button, p {
     margin: 0;
     padding: 0;
 }
+
+ul { list-style: none; }
 
 /* Wrapper */
 .wrapper {
@@ -29,9 +31,7 @@ body {
 }
 
 body,
-.start {
-    font-family: 'Balsamiq Sans', cursive;
-}
+.start { font-family: 'Balsamiq Sans', cursive; }
 
 /* Font Styles */
 h2, 
@@ -44,8 +44,7 @@ h1,
 .totalScore,
 .correctChoice,
 .answerButtons:hover,
-.answerButtons:focus,
-input[type="radio"]:checked+label { color: #FFF; }
+.answerButtons:focus { color: #FFF; }
 
 h2, 
 h3,
@@ -55,6 +54,13 @@ h3,
 .start:hover,
 .start:focus,
 .answerButtons { color: #0000CD; }
+
+h2, .answerButtons { letter-spacing: 1px; }
+
+.start, .correctChoice { 
+    font-size: 1.6rem;
+    letter-spacing: 1.5px;
+}
 
 /* Display/Flexbox */
 .flexContainer { display: flex; }
@@ -81,15 +87,12 @@ h1 {
 
 h2 {
     line-height: 1.3rem; 
-    letter-spacing: 1px;
     font-family: 'Itim', cursive;
 }
 
 /* Start Button Styles */
 .start {
     padding: 0.6rem 1.3rem;
-    font-size: 1.6rem;
-    letter-spacing: 1.5px;
     border-radius: 10px;
     background: #0000CD;
     border: 3px solid #FFF;
@@ -134,8 +137,6 @@ form, legend { width: 100%; }
 }
 
 /* Form Styles */
-fieldset { border: none; }
-
 h3 {
     font-size: 1.25rem;
     margin: 1.2rem 0.3rem 1rem;
@@ -151,7 +152,6 @@ h3 {
     border: 4px solid #0000CD;
     border-radius: 10px;
     font-weight: bold;
-    letter-spacing: 1px;
     width: calc((100% / 2) - 5%);
     height: 80px;
     font-size: 1rem;
@@ -186,6 +186,7 @@ input[type="radio"] { opacity: 0; }
 
 input[type="radio"]:checked + label { 
     background-color: #0000CD;
+    color: #FFF;
 }
 
 /* Quiz Message Styles */
@@ -204,11 +205,6 @@ input[type="radio"]:checked + label {
     font-size: 1.4rem;
     margin: 20px 0;
     line-height: 1.45rem;
-}
-
-.correctChoice {
-    font-size: 1.6rem;
-    letter-spacing: 1.5px;
 }
 
 .btn {
